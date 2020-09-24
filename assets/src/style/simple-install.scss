@@ -1,0 +1,92 @@
+.simple-install{
+    padding: 70px 0 68px;
+    &__header{
+       margin-bottom: 17px; 
+    }
+    &__list{
+        display: flex;
+        list-style: none;
+
+    }
+    &__item{
+        padding-top: 130px;
+        margin-right: 151px;
+        position: relative;
+        margin-top: 79px;
+        
+        &::before{
+            font-family: "Ubuntu Bold";
+            display: block;
+            color: #e1e2e9;
+            font-size: 152px;
+            position: absolute;
+            z-index: 1;
+            bottom: 15px;
+            left: -52px;
+        }
+        &:first-of-type::before{
+            content: "1";
+
+        }
+        &:last-of-type::before{
+            content: "2";
+        }
+
+    }
+    &__icon{
+        width: 50px;
+        height: 50px;
+        display: block;
+        position: absolute;
+        bottom: 62px;
+        z-index: 10;
+    }
+    &__link{
+        color: #0da088;
+        font-size: 18px;
+        line-height: 24px;
+        font-family: 'Ubuntu';
+    }
+    &__link:hover{
+        color:darken($color: #0da088, $amount: 15) ;
+    }
+    &__link:active,&__link:focus{
+        color: lighten($color: #0da088, $amount: 15) ;
+    }
+}
+
+@media (max-width: 750px) {
+    .simple-install{
+        padding: 88px 0 69px;
+        &__header{
+            margin-bottom: 42px; 
+         }
+
+        &__item{
+            padding-left: 41px;
+            margin-top: 90px;
+            margin-right: 113px;
+            
+            &::before{
+
+
+                bottom: 51px;
+                left: -11px;
+            }
+
+    
+        }
+        &__link{
+            font-size: 27px;
+            line-height: 28px;
+
+        }
+        &__icon{
+            width: 72px;
+            height: 72px;
+            left: 38px;
+            bottom: 95px;
+        }
+
+    }
+}

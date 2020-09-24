@@ -1,0 +1,21 @@
+.install{
+    padding: 76px 0 34px;
+    background-color: #eff4f4;
+    &__header{
+        margin-bottom: 33px;
+    }
+    &__text{
+        margin-bottom: 56px;
+        padding-right: 40%;
+    }
+}
+@media (max-width: 750px) {
+    .install{
+        padding: 93px 0 75px;
+
+        &__text{
+
+            padding-right: 0;
+        }
+    }
+}

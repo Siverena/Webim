@@ -1,0 +1,77 @@
+.install-html{
+    background-color: #eff4f4 ;
+    padding: 77px 0;
+    &__header{
+        margin-bottom: 63px;
+    }
+    &__list{
+        list-style: none;
+
+    }
+    &__item{
+        position: relative;
+        padding-left: 40px;
+        font-size: 16px;
+        line-height: 36px;
+        font-family: "Ubuntu";
+        color: #74757b;
+        margin-bottom: 33px;
+        &::before{
+            position: absolute;
+            left: 0;
+            top: 13px;
+            content: "";
+            display: block;
+            background-color: #3b4269 ;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+        
+
+    }
+    &__link{
+        color: #0da088;
+        font-size: 24px;
+        line-height: 36px;
+        font-family: "Ubuntu";
+
+    }
+    &__link:hover{
+        color:darken($color: #0da088, $amount: 15) ;
+    }
+    &__link:active,&__link:focus{
+        color: lighten($color: #0da088, $amount: 15) ;
+    }
+}
+@media (max-width: 750px) {
+
+
+    .install-html{
+
+        &__header{
+            width: 50%;
+            margin-bottom: 51px;
+        }
+
+        &__item{
+            margin-bottom: 60px;
+            line-height: 32px;
+            font-size: 24px;
+            &::before{
+                width: 11px;
+                height: 11px;
+            }
+           
+    
+        }
+        &__link{
+            font-size: 30px;
+            line-height: 35px;
+            display: block;
+    
+        }
+
+    }
+
+}

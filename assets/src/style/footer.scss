@@ -1,0 +1,146 @@
+.page-footer{
+    padding: 56px 60px;
+    min-width: 750px;
+    background-color: #393e6b;
+    &__wrap{
+        display: flex;
+    }
+    &__logo{
+        margin-right: 187px;
+    }
+}
+.logo{
+    width: 148px;
+    margin-bottom: 20px;
+    &__copyright{
+        color: rgba(255,255,255,0.5);
+        font-family: "Ubuntu";
+        font-size: 14px;
+    }
+}
+.contacts{
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    &__item{
+        margin-bottom: 20px;
+    }
+    &__tel{
+        margin-right: auto;
+        padding: 0 10px;
+        &-link{
+            color: #ffffff;
+            font-family: "Ubuntu";
+            font-size: 21px;
+            text-decoration: none;
+    
+            &--main{
+                font-size: 25px;
+            }
+        }
+        &-address{
+            color: rgba(255,255,255,0.5);
+            font-family: "Ubuntu";
+            font-size: 14px;
+            line-height: 26px;
+        }
+    }
+    &__mail{
+
+        padding: 0 70px 0 10px;
+        &-link{
+            color: #ffffff;
+            font-family: "Ubuntu";
+            font-size: 16px;
+            text-decoration: none;
+            line-height: 22px;
+        }
+        &-address{
+            color: rgba(255,255,255,0.5);
+            font-family: "Ubuntu";
+            font-size: 14px;
+            line-height: 45px;
+        }
+    }
+
+    &__item{
+        position: relative;
+        &--main{
+            line-height: 30px;
+            padding-left: 44px;
+            margin-bottom: 12px;
+            padding-top: 3px;
+        }
+        &--main::before{
+            position: absolute;
+            display: block;
+            content: "";
+            background-image: url("../img/phone.svg");
+            background-size: 30px 30px;
+            width: 30px;
+            height: 30px;
+            left: 0;
+        }
+    }
+
+}
+.social{
+    &__list{
+        list-style: none;
+        display: flex;
+    }
+    &__item{
+        margin-right: 19px;
+    }
+}
+.icon{
+    fill: rgba(255,255,255,0.5);
+    
+    &--twitter{
+        width: 21px;
+        height: 23px;
+    }
+    &--fb{
+        width: 18px;
+        height: 23px;
+    }
+    &--vk{
+        width: 25px;
+        height: 23px;
+
+    }
+    &--skype{
+        width: 25px;
+        height: 23px;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .page-footer{
+        padding: 56px 0px;
+        &__wrap{
+            padding: 0 60px;
+        }
+    }
+}
+@media (max-width: 750px) {
+    .contacts{
+        display: none;
+
+        
+    }
+    .logo{
+        display: none;
+        &__copyright{
+            color: #ffffff;
+        }
+    }
+    .page-footer{
+        padding: 56px 0px;
+        &__wrap{
+            padding: 0 60px;
+        }
+    }
+}

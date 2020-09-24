@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: local('Ubuntu'), url('../fonts/ubuntu.woff2') format('woff2'), url('../fonts/ubuntu.woff') format('woff'), url('../fonts/ubuntu.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu Bold';
+    src: local('Ubuntu Bold'), local('Ubuntu-Bold'), url('../fonts/ubuntubold.woff2') format('woff2'), url('../fonts/ubuntubold.woff') format('woff'), url('../fonts/ubuntubold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.visually-hidden:not(:focus):not(:active), input[type=checkbox].visually-hidden, input[type=radio].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.container{
+    width:1024px;
+    margin:  0 auto;
+    &--big{
+        width: 100%;
+        max-width:1540px;
+        margin:  0 auto;
+    }
+}
+
+
+.site-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 24px;
+    font-family: 'Ubuntu Bold';
+    text-decoration: none;
+    font-size: 14px;
+    outline: none;
+    width: 256px;
+    height: 48px;
+    margin-right: 20px;
+    white-space: nowrap;
+    margin-bottom: 32px;
+    &--green{
+        color: #ffffff;
+        background-color: #2cd3b8;
+
+    }
+    &--green:hover{
+        background-color: lighten($color: #2cd3b8, $amount: 15) ;
+    }
+    &--green:active, &--green:focus{
+        background-color: darken($color: #2cd3b8, $amount: 15);
+  
+    }
+    &--transparent{
+        color: #393e6b;
+        border: 1px solid #393e6b;
+    }
+    &--transparent:hover{
+        color: lighten($color: #393e6b, $amount: 15) ;
+        border: 1px solid lighten($color: #393e6b, $amount: 15);
+    }
+    &--transparent:active, &--transparent:focus{
+        color: darken($color: #393e6b, $amount: 15) ;
+        border: 1px solid darken($color: #393e6b, $amount: 15);
+    }
+    &--blue{
+        color: #ffffff;
+        background-color: #3b4269;
+
+    }
+    &--blue:hover{
+        background-color: lighten($color: #3b4269, $amount: 15) ;
+    }
+    &--blue:active, &--blue:focus{
+        background-color: darken($color: #3b4269, $amount: 15);
+  
+    }
+}
+main{
+    min-width: 750px;
+}
+.section{
+    &-header{
+        font-size: 31px;
+        color: #393e6b;
+        font-family: 'Ubuntu Bold';
+    
+    }
+    &-text{
+        font-family: 'Ubuntu';
+        font-size: 16px;
+        line-height: 24px;
+        color: #74757b;
+    }
+}
+
+.sms{
+    position: fixed;
+    right: 33px;
+    bottom: 1px;
+    width: 50px;
+    height: 50px;
+    padding: 8px;
+    border-radius: 50%;
+    background-color: #68cdbc;
+    border: 1px solid #1265dc;
+}
+
+
+@media (max-width: 1540px) {
+    .container{
+        width:1024px;
+
+        padding: 0 60px;
+        &--big{
+            max-width: 1024px;
+            width: 100%;
+   
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .container{
+     
+        width: 750px;
+        padding: 0 67px;
+   
+        &--big{
+            // padding: 0;
+            width: 750px;
+
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .site-btn{
+        width: 100%;
+        font-size: 24px;
+        padding: 37px 0;
+        border-radius: 45px;
+        
+    }
+    .section{
+        &-header{
+            font-size: 47px;
+            letter-spacing: 2px;
+            color: #393e6b;
+            font-family: 'Ubuntu Bold';
+        
+        }
+        &-text{
+            font-family: 'Ubuntu';
+            font-size: 26px;
+            line-height: 36px;
+            color: #74757b;
+        }
+    }
+}
+
+@import "header.scss";
+@import "install.scss";
+@import "simple-install.scss";
+@import "install-html.scss";
+@import "install-dashboard.scss";
+@import "after-install.scss";
+@import "other-canal.scss";
+@import "footer.scss";
