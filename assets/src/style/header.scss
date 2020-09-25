@@ -1,7 +1,6 @@
 .page-header{
     position: relative;
     width: 100%;
-    min-width: 750px;
     background-color: #ffffff;
     background-image: url("../img/header2.png");
     background-repeat: no-repeat;
@@ -111,6 +110,7 @@
         &__nav{
             padding: 50px 25px 28px 50px;
             position: absolute;
+            min-height: 589px;
             height: 100vh;
             left: -100%;
             display: flex;
@@ -128,6 +128,7 @@
 
         &__wrap{
             padding: 7px 60px;
+            position: relative;
         }
     }
     .page-nav{
@@ -150,7 +151,7 @@
     }
     .nav-btn{
         width: 56px;
-        height: 43px;
+        // height: 43px;
         border: none;
         background-color: transparent;
         padding: 0;
@@ -160,39 +161,15 @@
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            .open-image {
-                display: block;
-                width: 100%;
-                height: 4px;
-                background-color: #2cd3b8;
+            position: absolute;
+            &__icon{
+                width: 57px;
+                height: 57px;
+                fill: #2cd3b8;
             }
-            &::before {
-                content: "";
-                display: block;
-                top: 0px;
-                right: 0;
-                position: relative;
-                width: 100%;
-                height: 4px;
-                background-color: #2cd3b8;
-            }
-            &::after {
-                content: "";
-                display: block;
-                top: 0px;
-                right: 0;
-                position: relative;
-                width: 100%;
-                height: 4px;
-                background-color: #2cd3b8;
-            }
-            &:active,
-            &:focus {
-                .open-image,
-                &::after,
-                &::before {
-                background-color: #636060;
-                }
+            &__icon:active,
+            &__icon:focus {
+                fill: #393e6b;
             }
         }
         &--close {
@@ -200,38 +177,54 @@
             margin-right: auto;
             display: block;
             margin-bottom: 40px;
-            .close-image {
-                display: block;
-                position: relative;
-                width: 100%;
-                height: 100%;
-                &::after {
-                    content: "";
-                    display: block;
-                    top: 11px;
-                    right: 0;
-                    position: absolute;
-                    width: 100%;
-                    height: 2px;
-                    background-color: #2cd3b8;
-                    transform: rotate(-45deg);
-                }
-                &::before {
-                    content: "";
-                    display: block;
-                    top: 11px;
-                    right: 0px;
-                    position: absolute;
-                    width: 100%;
-                    height: 2px;
-                    background-color: #2cd3b8;
-                    transform: rotate(45deg);
-                }
-                &:hover::after,
-                &:hover::before {
-                    background-color: #000000;
-                }
+            &__icon{
+                width: 56px;
+                height: 56px;
+                fill: #2cd3b8;
+            }
+            &__icon:active,
+            &__icon:focus {
+                fill: #393e6b;
             }
         }
+    }
+}
+
+@media (max-width: 500px) {
+    .page-header{
+
+        &__logo-wrap{
+            padding: 15px;
+        }
+        &__logo{
+            width: 114px;
+            
+        }
+
+        &__wrap{
+            padding: 7px 30px;
+        }
+        &__nav{
+            padding: 30px 25px 28px 50px;
+        }
+    }
+
+    .nav-btn{
+        width: 40px;
+        height: 31px;
+
+
+        &--open {
+
+
+        }        
+        &--close {
+
+            &__icon{
+                width: 40px;
+                height: 31px;
+            }
+        }
+
     }
 }

@@ -65,3 +65,16 @@
         }
     }
 }
+@media (max-width:450px) {
+    .after-install{
+        &__icon{
+            width: 35px;
+            &__wrap{
+                width: 74px;
+                height: 74px;
+                margin-right: 20px;
+    
+            }
+        }
+    }
+}

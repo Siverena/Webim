@@ -1,6 +1,6 @@
 .page-footer{
     padding: 56px 60px;
-    min-width: 750px;
+width: 100%;
     background-color: #393e6b;
     &__wrap{
         display: flex;
@@ -141,6 +141,9 @@
         padding: 56px 0px;
         &__wrap{
             padding: 0 60px;
+        }
+        &__logo{
+            margin-right: 0;
         }
     }
 }

@@ -2,7 +2,8 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=750, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="css/main.min.css">
     <link rel="stylesheet" href="css/main.min.css.map">
     <title>Webim</title>
@@ -13,13 +14,21 @@
         <div class="page-header__wrap">
         
                 <button class="nav-btn nav-btn--open">
-                    <span class="open-image"></span>
+                    <svg class="nav-btn--open__icon">
+                        <use xlink:href="#btn-open"></use>
+                      </svg>
                 </button>
                 
          
             <nav class="page-header__nav page-nav">
                 <button class="nav-btn nav-btn--close">
-                    <span class="close-image"></span>
+ 
+
+
+                      <svg class="nav-btn--close__icon">
+                        <use xlink:href="#btn-close"></use>
+                      </svg>
+
                 </button>
                 <ul class="page-nav__list auth">
                     <li class="auth__item page-nav__item"><a class="page-nav__link" href="#">Вход</a></li>
@@ -38,6 +47,16 @@
         </div>
         
     </div>
+
+    <svg width="0" height="0" class="hidden">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212.982 212.982" id="btn-close">
+          <path d="M131.804 106.491l75.936-75.936c6.99-6.99 6.99-18.323 0-25.312-6.99-6.99-18.322-6.99-25.312 0L106.491 81.18 30.554 5.242c-6.99-6.99-18.322-6.99-25.312 0-6.989 6.99-6.989 18.323 0 25.312l75.937 75.936-75.937 75.937c-6.989 6.99-6.989 18.323 0 25.312 6.99 6.99 18.322 6.99 25.312 0l75.937-75.937 75.937 75.937c6.989 6.99 18.322 6.99 25.312 0 6.99-6.99 6.99-18.322 0-25.312l-75.936-75.936z" fill-rule="evenodd" clip-rule="evenodd"></path>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="btn-open">
+          <path d="M4 7v2h24V7H4zm0 8v2h24v-2H4zm0 8v2h24v-2H4z" color="#000" overflow="visible" font-family="Bitstream Vera Sans"></path>
+        </symbol>
+      </svg>
+
     </header>
     <main>
         <h1 class="page-header visually-hidden"></h1>

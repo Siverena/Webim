@@ -96,9 +96,7 @@
   
     }
 }
-main{
-    min-width: 750px;
-}
+
 .section{
     &-header{
         font-size: 31px;
@@ -142,12 +140,12 @@ main{
 @media (max-width: 1024px) {
     .container{
      
-        width: 750px;
+        width: 100%;
         padding: 0 67px;
    
         &--big{
             // padding: 0;
-            width: 750px;
+            width: 100%;
 
         }
     }
@@ -177,7 +175,39 @@ main{
         }
     }
 }
+@media (max-width: 500px) {
+    .container{
+     
+        width: 100%;
+        padding: 0 30px;
+   
+        &--big{
+            // padding: 0;
+            width: 100%;
 
+        }
+    }
+    .site-btn{
+
+        font-size: 14px;
+        padding: 10px 20px;
+        border-radius: 24px;
+        
+    }
+    .section{
+        &-header{
+            font-size: 31px;
+
+        
+        }
+        &-text{
+
+            font-size: 16px;
+            line-height: 24px;
+  
+        }
+    }
+}
 @import "header.scss";
 @import "install.scss";
 @import "simple-install.scss";

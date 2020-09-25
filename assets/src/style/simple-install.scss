@@ -61,7 +61,10 @@
         &__header{
             margin-bottom: 42px; 
          }
-
+        &__list{
+            display: flex;
+            flex-wrap: wrap;
+        }
         &__item{
             padding-left: 41px;
             margin-top: 90px;
@@ -86,6 +89,20 @@
             height: 72px;
             left: 38px;
             bottom: 95px;
+        }
+
+    }
+}
+@media (max-width: 450px) {
+    .simple-install{
+        &__link{
+            font-size: 18px;
+            line-height: 24px;
+
+        }
+        &__icon{
+            width: 50px;
+            height: 50px;
         }
 
     }

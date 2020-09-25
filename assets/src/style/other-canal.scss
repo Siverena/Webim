@@ -65,8 +65,27 @@
   
             font-size: 24px;
             line-height: 24px;
-            white-space: nowrap;
+            // white-space: nowrap;
 
+    
+        }
+    }
+}
+@media (max-width: 450px) {
+    .other-canal{
+        .section-text{
+            padding: 0;
+            margin-bottom: 30px;
+
+        }
+        &__icon{
+            width: 40px;
+            height: 40px;
+        }
+        &__link{
+
+            font-size: 18px;
+            line-height: 24px;
     
         }
     }
